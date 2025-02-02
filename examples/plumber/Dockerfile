@@ -1,8 +1,8 @@
 FROM rhub/r-minimal
 
 RUN installr -d \
-    -t "libsodium-dev curl-dev linux-headers" \
-    -a libsodium \
+    -t "libsodium-dev curl-dev linux-headers icu-dev" \
+    -a "libsodium icu-libs"\
     plumber Rcppcore/Rcpp
 
 WORKDIR /app
